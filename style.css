@@ -1,0 +1,109 @@
+:root {
+    --bg-fundo: #0f172a;
+    --bg-cartao: #1e293b;
+    --texto-claro: #f8fafc;
+    --texto-cinza: #94a3b8;
+    --azul-neon: #38bdf8;
+    --verde-ok: #22c55e;
+    --amarelo-aviso: #eab308;
+    --vermelho-erro: #ef4444;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+    background-color: var(--bg-fundo);
+    color: var(--texto-claro);
+    padding: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #334155;
+}
+
+.subtitulo {
+    color: var(--texto-cinza);
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+}
+
+.painel-status {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.badge {
+    padding: 0.45rem 0.9rem;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    display: inline-block;
+}
+
+.conectando { background-color: var(--amarelo-aviso); color: #000; }
+.online-mqtt { background-color: var(--verde-ok); color: #000; }
+.fallback-sqlite { background-color: var(--azul-neon); color: #000; }
+.erro { background-color: var(--vermelho-erro); color: #fff; }
+
+.grid-metricas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.card {
+    background-color: var(--bg-cartao);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #334155;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+}
+
+.card h2 {
+    font-size: 0.9rem;
+    color: var(--texto-cinza);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.8rem;
+}
+
+.valor {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--azul-neon);
+}
+
+.valor small {
+    font-size: 1.1rem;
+    color: var(--texto-cinza);
+    font-weight: 400;
+}
+
+.rodape {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #334155;
+    color: var(--texto-cinza);
+    font-size: 0.9rem;
+}
